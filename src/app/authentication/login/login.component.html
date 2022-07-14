@@ -3,16 +3,16 @@
     <mat-card-header>
       <mat-card-title>LOGIN</mat-card-title>
     </mat-card-header>
-    <form class="example-form">
+    <form [formGroup]="form" class="example-form">
       <mat-card-content>
         <mat-form-field class="example-full-width" appearance="outline">
-          <input matInput placeholder="Username">
+          <input matInput placeholder="Username" formControlName="username">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="outline">
-          <input matInput placeholder="Password">
+          <input matInput placeholder="Password" formControlName="password">
         </mat-form-field>
       </mat-card-content>
-      <button mat-raised-button color="primary" class="btn-block">Login</button>
+      <button mat-raised-button color="primary" class="btn-block" (click)="onSubmit()">Login</button>
     </form>
     <p><a href="javascript:void(0)">Forgot password?</a></p>
     <div class="social-icons">
